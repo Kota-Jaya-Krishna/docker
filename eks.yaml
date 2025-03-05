@@ -7,9 +7,13 @@ metadata:
   name: expense
   region: us-east-1
 
-managednodeGroups:
+managedNodeGroups:
   - name: expense
     instanceTypes: ["m5.large", "c3.large","c4.large","c5.large"]
     desiredCapacity: 3
     spot: true
 
+
+
+
+#eksctl create nodegroup --cluster expense --name expense --node-type m5.large --nodes 3 --managed#

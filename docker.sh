@@ -19,6 +19,8 @@ chmod +x ./kubectl
 mv kubectl /usr/local/bin/kubectl
 
 #eksctl
+PLATFORM=$(uname -s)_amd64
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz" -o eksctl_$PLATFORM.tar.gz
 tar -xvzf eksctl_$PLATFORM.tar.gz
 sudo mv eksctl /usr/local/bin
+eksctl version
